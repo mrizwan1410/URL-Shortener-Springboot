@@ -25,7 +25,7 @@ public class UrlMappingController
 
     // {"originalUrl":"https://example.com"}
     @PostMapping("/shorten")
-    @PreAuthorize(("hasRole('User)"))
+    @PreAuthorize(("hasRole('User')"))
     public ResponseEntity<UrlMappingDTO> createShortUrl(@RequestBody Map<String,String> request, Principal principal)
     {
         String originalUrl = request.get("originalUrl");
