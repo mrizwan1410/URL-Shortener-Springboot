@@ -7,12 +7,10 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class ClickEvent
-{
+public class ClickEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private LocalDateTime clickDate;
 
     @ManyToOne
